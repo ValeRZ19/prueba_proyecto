@@ -1,0 +1,184 @@
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.select-container img {
+    max-width: 100%; 
+    height: auto;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.paragrahp{
+    margin-top: 50px;
+    margin-bottom: -90px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.pin {
+    background-color: #9eccb0;
+    position: absolute;
+    width: 1.3em;
+    height: 1.5em;
+    border-radius: 50%;
+}
+
+.pin::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5em; 
+    height: 1.5em;
+    background-color: #9eccb0; 
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.pin::after {
+    content: '';
+    position: absolute;
+    top: 1.3em; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1em 0.5em 0;
+    border-color: #9eccb0 transparent transparent transparent;
+    z-index: 0;
+    
+}
+
+.pin span {
+    position: absolute;
+    top: 50%;
+    left: 2em; 
+    transform: translateY(-50%);
+    background: #ffffff;
+    border-radius: 3em;
+    padding: 0.3em 0.8em;
+    font-size: 0.9em;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.pin input {
+    display: none;
+}
+
+.pin input:checked + span {
+    background-color: #0056b3; 
+    color: white;
+}
+
+.pin input:checked ~ ::before {
+    background-color: #0056b3;
+}
+
+.pin input:checked ~ ::after {
+    border-color: #0056b3 transparent transparent transparent;
+}
+
+.pin::before {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.americas{
+    top: 85%;
+    left: 20%;
+}
+
+.europe {
+    top: 80%;
+    left: 60%;
+}
+
+.asia {
+    top: 85%;
+    left: 65%;
+}
+
+.africa {
+    top: 90%;
+    left: 51%;
+}
+
+.oceania {
+    top: 92%;
+    left: 74%;
+}
+
+.antarctic {
+    top: 97%;
+    left: 51%;
+}
+
+@media screen and (min-width:1000px){
+
+    .paragrahp{
+        font-size: 1.5em;
+        margin-top: 150px;
+    }
+
+    .select-container img{
+        width: 150%;
+    }
+       
+    .americas{
+        top: 160%;
+        left: 31%;
+    }
+
+    .europe {
+        top: 145%;
+        left: 65%;
+    }
+
+    .asia {
+        top: 155%;
+        left: 60%;
+    }
+
+    .africa {
+        top: 170%;
+        left: 51%;
+    }
+
+    .oceania {
+        top: 180%;
+        left: 70%;
+    }
+
+    .antarctic {
+        top: 194%;
+        left: 51%;
+    }
+
+}

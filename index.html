@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="/Imgs/favicon.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="/Docs/CSS/style.css">
+    <title>Countries list API</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <!-- NAV CONTAINER START -->
+            <div class="container-fluid">
+              <a href="" class="navbar-brand text-ligth fw-semibold fs-4">Proyect</a>
+      
+              <!-- NAV BUTTON  -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuLateral"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- OFFCANVAS MAIN CONTAINER START -->
+              <section
+                class="offcanvas offcanvas-start"
+                id="menuLateral"
+                tabindex="-1"
+              >
+                <div class="offcanvas-header" data-bs-theme="dark">
+                  <h5 class="offcanvas-title text-ligth">Proyect</h5>
+                  <button
+                    class="btn-close"
+                    type="button"
+                    aria-label="Close"
+                    data-bs-dismiss="offcanvas"
+                  ></button>
+                </div>
+                <!-- OFF CANVAS MENU LINKS  START-->
+                <div
+                  class="offcanvas-body d-flex flex-column justify-content-between px-0"
+                >
+                  <ul class="navbar-nav fs-5 justify-content-end">
+                    <li class="nav-item p-3 py-md-1">
+                      <a href="/index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item p-3 py-md-1">
+                      <a href="/Pages/countries.html" class="nav-link">Countries List</a>
+                    </li>
+                    <li class="nav-item p-3 py-md-1">
+                      <a href="/Pages/filterbyregions.html" class="nav-link">Countries by region</a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <!-- OFFCANVAS MAIN CONTAINER END  -->
+            </div>
+          </nav>
+    </header>
+    <section class="parallax">
+      <h2 id="title" class="title">Welcome to the Countries Explorer!</h2>
+      <img class="imgCosmos" src="/Imgs/cosmos.jpg" id="imgCosmos">
+      <img class="imgEarth" src="/Imgs/Earth.png" id="imgEarth">
+      <img class="imgGround" src="/Imgs/ground.png" >
+  </section>
+    <main class=" main  py-5">
+      <section>
+          <h2 class="text-center mb-4 subtitle">What Can You Do Here?</h2>
+          <p class="fs-5">This website is designed to make exploring countries fun and informative for everyone. Powered by the <a href="https://restcountries.com/" target="_blank">Rest Countries API</a>, you can easily discover details about nations worldwide. Whether you're a student, a traveler, or just curious, this tool has something for you!</p>
+          
+          <h3 class="mt-4 subtitleh3">Features:</h3>
+          <ul class="list-group list-group-flush fs-5 mb-4">
+              <li class="list-group-item">🔍 <strong>Search Countries:</strong> Quickly find any country by its name. Our search feature is case-insensitive, so you can search with ease.</li>
+              <li class="list-group-item">🌍 <strong>Filter by Region:</strong> Narrow down your exploration by continents like Asia, Europe, or the Americas.</li>
+              <li class="list-group-item">📋 <strong>Detailed Information:</strong> Click on a country to learn about its capital, population, and view its flag in a beautifully presented modal.</li>
+              <li class="list-group-item">🗂️ <strong>Comprehensive List:</strong> Browse through an organized list of all countries, complete with basic details at a glance.</li>
+          </ul>
+      </section>
+
+      <section>
+        <h2 class="text-center mb-4 subtitle">Why Use it?</h2>
+        <p class="fs-5">The world is full of diversity and amazing places to discover. This platform is designed to help you explore and learn more about different countries effortlessly. Here are some reasons why this app is perfect for everyone:</p>
+        <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item">✔️ <strong>Simple and easy to use:</strong> Designed for people of all ages, even if you're not tech-savvy.</li>
+            <li class="list-group-item">✔️ <strong>Reliable information:</strong> Provides accurate and updated details about countries from trusted sources.</li>
+            <li class="list-group-item">✔️ <strong>Fast and lightweight:</strong> Quickly shows the information you need without delays.</li>
+            <li class="list-group-item">✔️ <strong>Perfect for learning:</strong> A great tool for school projects, personal research, or satisfying your curiosity about the world.</li>
+        </ul>
+      </section>
+  </main>
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Valeria Rodríguez</p>
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="/Docs/JS/index.js"></script>
+    <script>
+        getCountries();
+    </script>
+    <script src="/Docs/JS/animations.js"></script>
+</body>
+</html>

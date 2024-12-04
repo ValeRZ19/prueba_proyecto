@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    /*Colores*/
+    --transparent_black: rgba(0, 0, 0, 0.651);
+    --light_gray: #f0f0f0;
+    --white: #fff;
+
+    /* Tipográfia */
+    --primary_font: "Montserrat", serif;
+    --decorative_font: "Noto Serif", serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    font-family: var(--primary_font);
+}
+
+body{
+    background-color: var(--light_gray);     
+}
+
+nav {
+    height: 80px;
+    background-color: var(--transparent_black); 
+    
+}
+
+
+.offcanvas {
+    background-color: #313131;
+    
+}
+.navbar-toggler {
+  border: none;
+  
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+ 
+.user-view{
+   height: 180px;
+}
+
+
+.parallax {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax img {
+    position: absolute;
+    /* width: 100%; */
+    bottom: 0;
+    
+}
+
+.imgCosmos{
+    height: 100%;
+}
+
+.imgCosmos ,.imgGround {
+    width: 100%;
+}
+
+
+.imgGround { 
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    height: 100px;
+    
+}
+
+
+.imgEarth {
+    width: 40%; 
+    position: absolute;
+    top: 15%; 
+    right: 15%;
+    z-index: 1; 
+}
+
+   
+.title {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--white);
+    font-family: var(--decorative_font);
+    z-index: 2;
+    font-weight: 700;
+    top: 75%; 
+    right: 35%; 
+    width: 60%;
+    text-align: center;
+
+}
+
+
+.main{
+    background-color: var(--white);
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 25px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.subtitleh3 {
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+
+.list-group-item {
+    background-color: #f0f8ff;
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: scale(1.02);
+    background-color: #e0f0ff;
+}
+
+
+footer {
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media screen and (min-width:1000px){
+    
+    nav {
+        height: 120px;
+    }
+
+
+   .navbar{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        animation: enhance-header linear both;
+        animation-timeline: scroll(root);
+        animation-range:  0 200px;
+   }
+
+
+   @keyframes enhance-header {
+        0%{
+            height: 75px;
+        }
+        100%{
+            height: 60px;
+            background-color: #000000af;
+        }
+   }
+
+   .parallax {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax img {
+    position: absolute;
+    /* width: 100%; */
+    height: auto;
+    bottom: 0;
+    
+}
+
+.imgCosmos ,.imgGround {
+    width: 100%;
+}
+
+.imgEarth {
+    width: 28%; 
+    position: absolute;
+    top: 10%; 
+    right: 10%;
+    transform: translateX(-50%);
+    z-index: 1; 
+}
+
+.imgGround { 
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+}
+
+    
+.title {
+    position: absolute;
+    top: 66%;
+    right: 39%;
+    transform: translateY(-50%);
+    font-size: 4.5rem;
+    color: var(--white);
+    font-family: var(--decorative_font);
+    z-index: 2;
+    font-weight: 700;
+}
+
+
+.main{
+    background-color: var(--white);
+    padding: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+}
